@@ -1,0 +1,25 @@
+{
+  "name": "skylite",
+  "version": "1.0.0",
+  "description": "sqlite db in browser with skynet persistence",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "webpack --mode production",
+	"start": "http-server dist"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.0.3",
+    "http-server": "^0.12.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "codemirror": "^5.56.0",
+    "material-components-web": "^7.0.0",
+    "skynet-js": "^0.1.0",
+    "sql.js": "^1.3.0"
+  }
+}

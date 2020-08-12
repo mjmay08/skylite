@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>Skylite - Sqlite Interpreter On Skynet</title>
+  <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="stylesheet" href="css/material-components-web.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <script src="js/codemirror.js"></script>
+  <script src="js/material-components-web.min.js"></script>
+</head>
+
+<body>
+  <h1>Skylite - Sqlite Interpreter On Skynet</h1>
+
+  <main>
+    <label for='commands'>Enter some SQL</label>
+    <br>
+
+    <textarea id="commands">DROP TABLE IF EXISTS crypto;
+CREATE TABLE crypto( id integer,name text,usefulness_rank integer );
+
+  INSERT INTO crypto VALUES (1,'Bitcoin',2);
+  INSERT INTO crypto VALUES (2,'Ethereum',3);
+  INSERT INTO crypto VALUES (3,'Siacoin',1);
+  INSERT INTO crypto VALUES (4,'Filecoin',999);
+  INSERT INTO crypto VALUES (4,'Litecoin',4);
+
+SELECT name,usefulness_rank FROM crypto ORDER BY usefulness_rank;</textarea>
+<div style="margin-top: 10px">
+	<button id="execute" class="mdc-button mdc-button--raised action-btn">
+		<div class="mdc-button__ripple"></div>
+		<img src="assets/execute.png" class="btn-image">
+		<span class="mdc-button__label">Execute</span>
+	</button>
+    <button id='savedb' class="mdc-button mdc-button--raised action-btn">
+		<div class="mdc-button__ripple"></div>
+		<img src="assets/export.png" class="btn-image">
+		<span class="mdc-button__label">Export DB to Skynet</span>
+	</button>
+	<button id="importSkylinkBtn" class="mdc-button mdc-button--raised action-btn">
+		<div class="mdc-button__ripple"></div>
+		<img src="assets/import.png" class="btn-image">
+		<span class="mdc-button__label">Import DB from Skynet</span>
+	</button>
+</div>
+
+	<div id="uploadCompleteModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="skylink-label">Skylink:</div>
+			<div id="uploadedSkylink" class="sia-color"></div>
+		</div>
+	</div>
+	
+	<div id="overlay">
+		<div id="myProgress">
+			<div id="myBar"></div>
+		</div>
+	</div>
+	<div id="overlay-download">
+		<div class="spinner"></div>
+	</div>
+
+    <div id="error" class="error"></div>
+
+    <pre id="output">Results will be displayed here</pre>
+	<script src="js/main.js"></script>
+  </main>
+</body>
+
+</html>

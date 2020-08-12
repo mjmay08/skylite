@@ -1,0 +1,213 @@
+html {
+	background:#222;
+	margin:auto;
+	width:80%;
+}
+
+body{
+	background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+	border: 1px solid black;
+	padding: 10px 20px;
+	box-shadow: 5px 0px 30px #000;
+	border-radius: 8px;
+}
+
+h1 {
+	text-align: center;
+	color: #1ED660;
+	margin: 0 0 30px;
+}
+
+.button {
+	color: #333;
+	background: linear-gradient(#eee, #ddd);
+	border: 1px solid #222;
+	border-radius: 3px;
+	padding: 7px;
+	margin-right: 5px;
+	transition: .3s;
+	font-family: ubuntu, sans-serif;
+	font-size: 1em;
+}
+
+.button:active {
+	background: linear-gradient(#ddd, #eee);
+}
+
+.button:hover, button:focus {
+	box-shadow: 0 0 2px #222;
+}
+
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.error {
+	color:red;
+	transition:.5s;
+	overflow:hidden;
+}
+
+#output {
+	overflow: auto;
+}
+
+table {
+	width:auto;
+	margin:auto;
+	border:1px solid black;
+ 	border-collapse:collapse;
+ 	margin-bottom:10px;
+}
+
+th, td {
+	border:1px solid #777;
+}
+
+footer {
+	font-size:.8em;
+	color: #222;
+}
+
+.btn-image {
+	margin-right: 5px;
+}
+
+.action-btn {
+	--mdc-theme-primary: #1ED660;
+}
+
+
+#myProgress {
+  width: 50%;
+  margin-top: 25%;
+  margin-left: 25%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+#overlay-download {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.spinner {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   height:60px;
+   width:60px;
+   margin:0px auto;
+   -webkit-animation: rotation .6s infinite linear;
+   -moz-animation: rotation .6s infinite linear;
+   -o-animation: rotation .6s infinite linear;
+   animation: rotation .6s infinite linear;
+   border-left:6px solid rgba(0,174,239,.15);
+   border-right:6px solid rgba(0,174,239,.15);
+   border-bottom:6px solid rgba(0,174,239,.15);
+   border-top:6px solid rgba(0,174,239,.8);
+   border-radius:100%;
+}
+
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+   from {-moz-transform: rotate(0deg);}
+   to {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+   from {-o-transform: rotate(0deg);}
+   to {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
+}
+
+#uploadComplete {
+	display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #7f8c8d;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 450px; /* Could be more or less, depending on screen size */
+  border-radius: 5px;
+}
+
+.skylink-label {
+	font-weight: "bold";
+	color: #1ED660;
+	margin-bottom: 5px;
+}
+.sia-color {
+	color: #1ED660;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
